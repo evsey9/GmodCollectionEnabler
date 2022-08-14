@@ -4,9 +4,9 @@ A simple python script to enable GMod addons from specific collections.
 ## 📝 How to use
 Tested on Python 3.9<br>
 1. Disable all addons in GMod and close the game
-2. Install requirements from requirements.txt (only `requests` as of now), or create virtual environment and install requirements there
-3. Run `python main.py` and input the collection IDs
-4. Select addonnomount.cfg from the GarrysMod/garrysmod/cfg folder
+2. Install [Python 3.9 or newer](https://www.python.org/downloads/) and then install requirements: `pip install -r requirements.txt` (run this in the folder of the script)
+3. Run `python main.py` in the folder and input the collection IDs
+4. Select addonnomount.cfg from the GarrysMod/garrysmod/cfg folder in the file selection dialogue
 5. The addons from the specified collections are enabled, while the rest of the disabled/enabled addons are untouched
 
 ## ✏️ Features
