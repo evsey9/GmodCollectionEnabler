@@ -68,10 +68,17 @@ def get_path_to_disabled_addons_file():
 
 
 def main():
-    input_collection = list(map(int, input().split()))
-    ids = get_item_ids(input_collection)
+    input_collection = list(map(int, input("Input list of collection IDs separated by spaces: ").split()))
+    item_ids = get_item_ids(input_collection)
     path = get_path_to_disabled_addons_file()
+    with open(path, "r") as file:
+        lines = file.readlines()
+    with open(path, "w") as file:
+        for line in lines:
+            if not any(enabled_id in line for enabled_id in item_ids):
+                file.write(line)
     print(path)
+    print("Enabled the collection mods!")
 
 
 if __name__ == "__main__":
